@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" width="900" height="580" style="font-family: 'Georgia', serif; background: #0a0908;">
+
+  <!-- Background -->
+  <rect width="900" height="580" fill="#0a0908"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#fde68a" font-size="22" font-weight="bold" letter-spacing="2">StoryForge — Architecture</text>
+  <text x="450" y="62" text-anchor="middle" fill="#7c746d" font-size="11" font-family="monospace" letter-spacing="1">GEMINI LIVE AGENT CHALLENGE</text>
+
+  <!-- Divider line -->
+  <line x1="80" y1="76" x2="820" y2="76" stroke="#d97706" stroke-opacity="0.25" stroke-width="1"/>
+
+  <!-- ───── USER ───── -->
+  <rect x="30" y="100" width="120" height="64" rx="12" fill="#141210" stroke="#d97706" stroke-opacity="0.5" stroke-width="1.5"/>
+  <text x="90" y="126" text-anchor="middle" fill="#fde68a" font-size="13" font-weight="bold">User</text>
+  <text x="90" y="143" text-anchor="middle" fill="#7c746d" font-size="10" font-family="monospace">Browser</text>
+  <text x="90" y="156" text-anchor="middle" fill="#7c746d" font-size="10" font-family="monospace">Next.js / Vercel</text>
+
+  <!-- ───── FASTAPI BACKEND ───── -->
+  <rect x="340" y="88" width="220" height="88" rx="12" fill="#1a1612" stroke="#d97706" stroke-width="2"/>
+  <text x="450" y="114" text-anchor="middle" fill="#f59e0b" font-size="13" font-weight="bold">FastAPI Backend</text>
+  <text x="450" y="131" text-anchor="middle" fill="#7c746d" font-size="10" font-family="monospace">Google Cloud Run</text>
+  <line x1="360" y1="140" x2="540" y2="140" stroke="#d97706" stroke-opacity="0.2" stroke-width="1"/>
+  <text x="450" y="156" text-anchor="middle" fill="#a89880" font-size="10" font-family="monospace">SSE Stream  •  REST API</text>
+
+  <!-- ───── GEMINI 2.5 FLASH ───── -->
+  <rect x="680" y="88" width="180" height="64" rx="12" fill="#141210" stroke="#4285f4" stroke-opacity="0.6" stroke-width="1.5"/>
+  <text x="770" y="114" text-anchor="middle" fill="#93c5fd" font-size="13" font-weight="bold">Gemini 2.5 Flash</text>
+  <text x="770" y="131" text-anchor="middle" fill="#7c746d" font-size="10" font-family="monospace">Story Outline + Prose</text>
+  <text x="770" y="145" text-anchor="middle" fill="#7c746d" font-size="10" font-family="monospace">Google GenAI SDK</text>
+
+  <!-- ───── GEMINI IMAGE ───── -->
+  <rect x="680" y="190" width="180" height="54" rx="12" fill="#141210" stroke="#4285f4" stroke-opacity="0.6" stroke-width="1.5"/>
+  <text x="770" y="214" text-anchor="middle" fill="#93c5fd" font-size="13" font-weight="bold">Gemini Image</text>
+  <text x="770" y="231" text-anchor="middle" fill="#7c746d" font-size="10" font-family="monospace">Scene Illustrations</text>
+
+  <!-- ───── CLOUD TTS ───── -->
+  <rect x="680" y="282" width="180" height="54" rx="12" fill="#141210" stroke="#34a853" stroke-opacity="0.6" stroke-width="1.5"/>
+  <text x="770" y="306" text-anchor="middle" fill="#86efac" font-size="13" font-weight="bold">Cloud TTS</text>
+  <text x="770" y="323" text-anchor="middle" fill="#7c746d" font-size="10" font-family="monospace">Neural2 Narration</text>
+
+  <!-- ───── CLOUD STORAGE ───── -->
+  <rect x="340" y="290" width="150" height="54" rx="12" fill="#141210" stroke="#34a853" stroke-opacity="0.6" stroke-width="1.5"/>
+  <text x="415" y="314" text-anchor="middle" fill="#86efac" font-size="13" font-weight="bold">Cloud Storage</text>
+  <text x="415" y="331" text-anchor="middle" fill="#7c746d" font-size="10" font-family="monospace">Images + Audio (GCS)</text>
+
+  <!-- ───── FIRESTORE ───── -->
+  <rect x="510" y="290" width="150" height="54" rx="12" fill="#141210" stroke="#fbbc04" stroke-opacity="0.6" stroke-width="1.5"/>
+  <text x="585" y="314" text-anchor="middle" fill="#fde68a" font-size="13" font-weight="bold">Firestore</text>
+  <text x="585" y="331" text-anchor="middle" fill="#7c746d" font-size="10" font-family="monospace">Saved Stories DB</text>
+
+  <!-- ═══════ ARROWS ═══════ -->
+
+  <!-- User → Backend: POST /api/prompt -->
+  <line x1="150" y1="122" x2="338" y2="122" stroke="#d97706" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <polygon points="338,118 348,122 338,126" fill="#d97706"/>
+  <text x="244" y="112" text-anchor="middle" fill="#d97706" font-size="9" font-family="monospace">POST /api/prompt</text>
+
+  <!-- Backend → User: SSE stream -->
+  <line x1="338" y1="140" x2="150" y2="140" stroke="#f59e0b" stroke-width="1.5"/>
+  <polygon points="150,136 140,140 150,144" fill="#f59e0b"/>
+  <text x="244" y="155" text-anchor="middle" fill="#f59e0b" font-size="9" font-family="monospace">SSE blocks stream</text>
+
+  <!-- Backend → Gemini 2.5 Flash -->
+  <line x1="560" y1="112" x2="678" y2="112" stroke="#4285f4" stroke-opacity="0.7" stroke-width="1.5"/>
+  <polygon points="678,108 688,112 678,116" fill="#4285f4" fill-opacity="0.7"/>
+  <text x="619" y="104" text-anchor="middle" fill="#93c5fd" font-size="9" font-family="monospace">GenAI SDK</text>
+
+  <!-- Backend → Gemini Image -->
+  <line x1="560" y1="155" x2="680" y2="210" stroke="#4285f4" stroke-opacity="0.7" stroke-width="1.5"/>
+  <polygon points="675,207 685,213 679,202" fill="#4285f4" fill-opacity="0.7"/>
+  <text x="628" y="188" text-anchor="middle" fill="#93c5fd" font-size="9" font-family="monospace">IMAGE blocks</text>
+
+  <!-- Backend → Cloud TTS -->
+  <line x1="450" y1="176" x2="450" y2="255" stroke="#34a853" stroke-opacity="0.5" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="450" y1="255" x2="680" y2="305" stroke="#34a853" stroke-opacity="0.5" stroke-width="1" stroke-dasharray="4,3"/>
+  <polygon points="675,302 685,307 676,312" fill="#34a853" fill-opacity="0.5"/>
+
+  <!-- Gemini Image → Cloud Storage -->
+  <line x1="680" y1="225" x2="492" y2="305" stroke="#34a853" stroke-opacity="0.6" stroke-width="1.5"/>
+  <polygon points="497,300 487,308 494,312" fill="#34a853" fill-opacity="0.6"/>
+  <text x="572" y="260" text-anchor="middle" fill="#86efac" font-size="9" font-family="monospace">upload PNG</text>
+
+  <!-- Cloud TTS → Cloud Storage -->
+  <line x1="680" y1="309" x2="492" y2="317" stroke="#34a853" stroke-opacity="0.6" stroke-width="1.5"/>
+  <polygon points="492,313 482,317 492,321" fill="#34a853" fill-opacity="0.6"/>
+  <text x="586" y="300" text-anchor="middle" fill="#86efac" font-size="9" font-family="monospace">upload MP3</text>
+
+  <!-- Backend → Firestore -->
+  <line x1="510" y1="176" x2="585" y2="288" stroke="#fbbc04" stroke-opacity="0.5" stroke-width="1.5"/>
+  <polygon points="581,284 589,292 577,292" fill="#fbbc04" fill-opacity="0.5"/>
+  <text x="572" y="238" text-anchor="middle" fill="#fde68a" font-size="9" font-family="monospace">save story</text>
+
+  <!-- Cloud Storage → User (public URLs) -->
+  <line x1="340" y1="340" x2="90" y2="340" stroke="#86efac" stroke-opacity="0.5" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="90" y1="340" x2="90" y2="166" stroke="#86efac" stroke-opacity="0.5" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <polygon points="86,166 90,156 94,166" fill="#86efac" fill-opacity="0.5"/>
+  <text x="200" y="358" text-anchor="middle" fill="#86efac" font-size="9" font-family="monospace">public GCS URLs (images + audio)</text>
+
+  <!-- ═══════ FLOW LABELS ═══════ -->
+  <rect x="30" y="400" width="840" height="150" rx="14" fill="#141210" stroke="#d97706" stroke-opacity="0.15" stroke-width="1"/>
+  <text x="450" y="424" text-anchor="middle" fill="#fde68a" font-size="12" font-weight="bold" letter-spacing="1">REQUEST FLOW</text>
+
+  <!-- Step boxes -->
+  <!-- 1 -->
+  <rect x="50" y="436" width="26" height="26" rx="6" fill="#d97706"/>
+  <text x="63" y="454" text-anchor="middle" fill="#0a0908" font-size="13" font-weight="bold">1</text>
+  <text x="84" y="448" fill="#f0ebe4" font-size="11">User types a premise → </text>
+  <text x="84" y="462" fill="#7c746d" font-size="10" font-family="monospace">POST /api/prompt → session_id returned</text>
+
+  <!-- 2 -->
+  <rect x="50" y="472" width="26" height="26" rx="6" fill="#d97706"/>
+  <text x="63" y="490" text-anchor="middle" fill="#0a0908" font-size="13" font-weight="bold">2</text>
+  <text x="84" y="484" fill="#f0ebe4" font-size="11">Browser opens SSE →</text>
+  <text x="84" y="498" fill="#7c746d" font-size="10" font-family="monospace">GET /api/generate/{session_id}</text>
+
+  <!-- 3 -->
+  <rect x="50" y="508" width="26" height="26" rx="6" fill="#d97706"/>
+  <text x="63" y="526" text-anchor="middle" fill="#0a0908" font-size="13" font-weight="bold">3</text>
+  <text x="84" y="520" fill="#f0ebe4" font-size="11">Backend calls Gemini 2.5 Flash (2-phase: outline → prose) →</text>
+  <text x="84" y="534" fill="#7c746d" font-size="10" font-family="monospace">CHAPTER / PROSE / IMAGE / ANNOTATION blocks streamed to browser</text>
+
+  <!-- 4 -->
+  <rect x="450" y="436" width="26" height="26" rx="6" fill="#d97706"/>
+  <text x="463" y="454" text-anchor="middle" fill="#0a0908" font-size="13" font-weight="bold">4</text>
+  <text x="484" y="448" fill="#f0ebe4" font-size="11">For each IMAGE block →</text>
+  <text x="484" y="462" fill="#7c746d" font-size="10" font-family="monospace">Gemini Image model → upload to GCS → URL streamed back</text>
+
+  <!-- 5 -->
+  <rect x="450" y="472" width="26" height="26" rx="6" fill="#d97706"/>
+  <text x="463" y="490" text-anchor="middle" fill="#0a0908" font-size="13" font-weight="bold">5</text>
+  <text x="484" y="484" fill="#f0ebe4" font-size="11">Story complete →</text>
+  <text x="484" y="498" fill="#7c746d" font-size="10" font-family="monospace">Cloud TTS narrates → MP3 uploaded to GCS → AUDIO event sent</text>
+
+  <!-- 6 -->
+  <rect x="450" y="508" width="26" height="26" rx="6" fill="#d97706"/>
+  <text x="463" y="526" text-anchor="middle" fill="#0a0908" font-size="13" font-weight="bold">6</text>
+  <text x="484" y="520" fill="#f0ebe4" font-size="11">User clicks Save →</text>
+  <text x="484" y="534" fill="#7c746d" font-size="10" font-family="monospace">Story + GCS URLs saved to Firestore → shareable /story/{id} link</text>
+
+</svg>

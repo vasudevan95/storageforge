@@ -29,7 +29,7 @@ gcloud services enable run.googleapis.com cloudbuild.googleapis.com texttospeech
 
 ## Part 1: Backend → Google Cloud Run
 
-### Step 1 — Grant IAM permissions to Cloud Run
+### Step 1 — Grant IAM permissions to Cloud R
 
 First, get your project number:
 
