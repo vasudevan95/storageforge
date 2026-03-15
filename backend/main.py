@@ -57,6 +57,16 @@ class SaveStoryRequest(BaseModel):
     blocks: list[dict]
 
 
+@app.get("/")
+async def root():
+    return {
+        "service": "StoryForge API",
+        "status": "running",
+        "description": "AI-powered story generation using Gemini",
+        "endpoints": ["/health", "/api/prompt", "/api/generate/{session_id}", "/api/story/{story_id}"],
+    }
+
+
 @app.get("/health")
 async def health():
     return {"status": "ok", "service": "storyforge-backend"}

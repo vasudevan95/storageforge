@@ -22,7 +22,7 @@ function GeneratePageInner() {
 
   const bottomRef = useRef<HTMLDivElement>(null)
   const chapterCount = useRef(0)
-  const toastTimer = useRef<ReturnType<typeof setTimeout>>()
+  const toastTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined)
   const doneRef = useRef(false)
   const startedRef = useRef(false)   // guards against StrictMode double-mount
   const sessionIdRef = useRef<string>('')

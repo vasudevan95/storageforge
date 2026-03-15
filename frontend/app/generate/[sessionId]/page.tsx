@@ -19,7 +19,7 @@ export default function GeneratePage() {
   const promptRef = useRef<string>('')
   const bottomRef = useRef<HTMLDivElement>(null)
   const chapterCount = useRef(0)
-  const toastTimer = useRef<ReturnType<typeof setTimeout>>()
+  const toastTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined)
   const doneRef = useRef(false)
 
   // Save story to Firestore
